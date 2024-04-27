@@ -4,6 +4,7 @@ import api from "../api";
 import { REFRESH_TOKEN, ACCESS_TOKEN } from "../constants";
 import { useEffect, useState } from "react";
 
+// eslint-disable-next-line react/prop-types
 function ProtectedRoute({children}) {
     const [isAuthorized, setIsAuthorized] = useState(null);
 
@@ -52,3 +53,5 @@ function ProtectedRoute({children}) {
 
     return isAuthorized ? children : <Navigate to="/login"/>;
 }
+
+export default ProtectedRoute;
