@@ -4,9 +4,11 @@ import { useNavigate } from "react-router-dom";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
 import "../styles/Form.css"
 
+// eslint-disable-next-line react/prop-types
 function Form({ route, method }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    // eslint-disable-next-line no-unused-vars
     const [loading, setaLoading] = useState(false);
     const navigate = useNavigate();
 
